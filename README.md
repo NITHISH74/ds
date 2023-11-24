@@ -1,6 +1,6 @@
 # ds
 ## ex.no.01 data cleaning and multivariate analysis
-```
+```python
 import numpy as np
 import pandas as pd
 df=pd.read_csv("/content/Data_set.csv")
@@ -43,13 +43,12 @@ plt.show()
 ```
 
 ## ex.no.02 IQR Score and univariate analysis
-```
+```python
 import pandas as pd
 import numpy as np
 import seaborn as sns
 import pandas as pd
 from scipy import stats
-
 df = pd.read_csv("/content/heights.csv")
 
 sns.boxplot(data=df)
@@ -57,13 +56,11 @@ sns.scatterplot(data=df)
 
 max =df['height'].quantile(0.90)
 min =df['height'].quantile(0.15)
-
 max
 min
 
 dq = df[((df['height']>=min)&(df['height']<=max))]
 dq
-
 low = min-1.5*iqr
 high = max+1.5*iqr
 
@@ -86,7 +83,7 @@ df.describe()
 ```
 
 ## ex.no.03 z score and feature generation
-```
+```python
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -139,7 +136,7 @@ df4[["Height","Weight"]]=scaler.fit_transform(df4[["Height","Weight"]])
 df4.head(10)
 ```
 ## ex.no. 04 data cleaning process and feature Transformation (05)
-```
+```python
 import numpy as np
 import pandas as pd
 df=pd.read_csv("/content/Data_set.csv")
@@ -217,7 +214,7 @@ sm.qqplot(df7["Highly Positive Skew"], fit=True, line='45')
 plt.show()
 ```
 ## ex.no.06 univariate (2b) and data visualization i)Line graph ii)Scatter plot
-```
+```python
 import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
@@ -245,7 +242,7 @@ plt.show()
 ```
 
 ## ex.no.07 Multivariate analysis(1b) and data visualization i)Bar chart using matplot and seaborn ii)Violin plot
-```
+```python
 import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
@@ -271,7 +268,7 @@ plt.show()
 ```
 
 ## ex.no.08 IQR Method(2a) and data visualization i)KDE Plot ii)Heat map
-```
+```python
 import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
@@ -291,7 +288,7 @@ plt.show()
 ```
 
 ## ex.no.09 univariate analysis(2b) and data visualization i)Histogram ii)Box plot
-```
+```python
 import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
@@ -308,7 +305,7 @@ plt.show()
 ```
 
 ## ex.no.10 data cleaning process(1a) and Feature Selection i)Any one Filter Method ii)Any one Wrapper Method
-```
+```python
 import pandas as pd
 from sklearn.feature_selection import SelectKBest, chi2, RFE
 from sklearn.ensemble import RandomForestClassifier
